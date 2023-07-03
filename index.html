@@ -29,17 +29,27 @@
         <li class="list-group-item">Item 2</li>
         <li class="list-group-item">Item 3</li>
         <li class="list-group-item">Item 4</li>
+        <li class="newcl">Item 5</li>
       </ul>
     </div>
   </div>
   <script>
-    var itemlist = document.querySelector('#items');
-    itemlist.children[2].style.backgroundColor='green';
-    var ind=document.getElementsByClassName('list-group-item');
-    for(var i=0;i<ind.length;i++)
-    {
-      ind[i].style.fontWeight='bold';
-    }
+    // var itemlist = document.querySelector('#items');     // Selectt By Id
+    // itemlist.children[2].style.backgroundColor='green';
+    // var ind=document.getElementsByClassName('list-group-item');
+    // for(var i=0;i<ind.length;i++)
+    // {
+    //   ind[i].style.fontWeight='bold';
+    // }
+
+    // Another question
+    // var newitem = document.getElementsByClassName('newcl');       // Select by Class Name
+    // newitem[0].style.backgroundColor = 'green';
+    // newitem[0].style.fontWeight = 'bold';
+
+    var newitem=document.getElementsByTagName('li');    // Select By Tag name
+    newitem[4].style.backgroundColor = 'yellow';
+    newitem[4].style.fontWeight = 'bold';
 
   </script>
 </body>
