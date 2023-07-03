@@ -18,7 +18,7 @@
   </header>
   <div class="container">
     <div id="main" class="card card-body">
-      <h2 id="add">Add Items</h2>
+      <h2 id="title">Add Items</h2>
       <form class="form-inline mb-3">
         <input type="text" class="form-control mr-2">
         <input type="submit" class="btn btn-dark" value="Submit">
@@ -29,7 +29,7 @@
         <li class="list-group-item">Item 2</li>
         <li class="list-group-item">Item 3</li>
         <li class="list-group-item">Item 4</li>
-        <li class="newcl">Item 5</li>
+        <!-- <li class="newcl">Item 5</li> -->
       </ul>
     </div>
   </div>
@@ -47,9 +47,33 @@
     // newitem[0].style.backgroundColor = 'green';
     // newitem[0].style.fontWeight = 'bold';
 
-    var newitem=document.getElementsByTagName('li');    // Select By Tag name
-    newitem[4].style.backgroundColor = 'yellow';
-    newitem[4].style.fontWeight = 'bold';
+    // var newitem=document.getElementsByTagName('li');    // Select By Tag name
+    // newitem[4].style.backgroundColor = 'yellow';
+    // newitem[4].style.fontWeight = 'bold';
+
+    // var input=document.querySelector('input');
+    // input.value='Hello World';
+    // var chngbtn=document.querySelector('input[type="submit"]');   // select like this if more than same tag is present
+    // chngbtn.value='SEND';
+
+    //Another Question
+    var item=document.querySelector('.list-group-item');      // select By querySelector
+    item.style.color='red';
+
+    var lastitem=document.querySelector('.list-group-item:last-child');
+    lastitem.style.color='blue';
+
+    var seconditem=document.querySelector('.list-group-item:nth-child(2)');
+    seconditem.style.color='green';
+
+    var thirditem=document.querySelector('.list-group-item:nth-child(3)');
+    thirditem.style.color='white';
+
+    var odd=document.querySelectorAll('.list-group-item:nth-child(odd)');
+    for(var i=0;i<odd.length;i++)
+    {
+      odd[i].style.backgroundColor='green';
+    }
 
   </script>
 </body>
